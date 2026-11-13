@@ -41,7 +41,7 @@ addEventListener('message',event=>{if(event.source!==frame.contentWindow)return;
  if(data?.type==='rise-request-context')sendContext();
  if(data?.type==='rise-career-save'&&Array.isArray(data.plans))store.setItem('rise-plan-career-v2',JSON.stringify(data.plans));
  if(data?.type==='d360-request-stage-config')sendStages();
- if(data?.type==='d360-open-admin')RiseBundle.open('admin','','#riseplan');
+ if(data?.type==='d360-open-admin')RiseBundle.open('admin','','#career');
  if(data?.type==='rise-open-dashboard')RiseBundle.open('admin','','#riseplan');
 });
 const initial=history.state;
