@@ -23,7 +23,7 @@ window.RiseBundle={storage:store,session,route:'#career',query:'',hash:'',mode:'
   this.route=next;remember();notifyRoute();
  },
  open(mode,query='',route=''){
-  this.mode=mode;this.query=query;this.hash='';if(route)this.route=normalizeRoute(route);
+  this.mode=mode;this.query=query;this.hash=(mode==='user'&&!query&&!route)?'#career-plan':'';if(route)this.route=normalizeRoute(route);
   remember();renderPage();
  }
 };
