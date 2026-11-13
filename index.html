@@ -16,7 +16,7 @@ function remember(replace=false){
 }
 function renderPage(){frame.srcdoc=pages[RiseBundle.mode].replace(/__RISE_ASSET_\d+__/g,resource)}
 function notifyRoute(){const target=frame.contentWindow;if(target)target.dispatchEvent(new target.Event('hashchange'))}
-window.RiseBundle={storage:store,session,route:'#riseplan',query:'',hash:'',mode:'user',
+window.RiseBundle={storage:store,session,route:'#career',query:'',hash:'',mode:'admin',
  setRoute(value){
   const next=normalizeRoute(value);
   if(next===this.route)return;
